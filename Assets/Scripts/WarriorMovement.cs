@@ -9,9 +9,11 @@ public class WarriorMovement : MonoBehaviour
     public float horizontalMove = 0f;
     public Animator _animator = new Animator();
     private Rigidbody2D _rigidbody;
+    public Transform attackPoint;
+    public LayerMask enemyLayers;
+
     private SpriteRenderer _spriteRenderer;
-  
-   
+
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
