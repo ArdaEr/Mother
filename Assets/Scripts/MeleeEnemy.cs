@@ -12,11 +12,13 @@ public class MeleeEnemy : MonoBehaviour
     [SerializeField] private LayerMask _mask;
     private float cooldownTimer = Mathf.Infinity;
     private Animator _anima;
+    private EnemyPatrol _patrol;
 
     private void Start() 
     {
         _collider = GetComponent<BoxCollider2D>();
         _anima = GetComponent<Animator>();
+        _patrol = GetComponent<EnemyPatrol>();
     }
     // Update is called once per frame
     void Update()
@@ -33,6 +35,8 @@ public class MeleeEnemy : MonoBehaviour
             _anima.SetTrigger("meleeAttack");
             }
         }
+        if (_patrol != null)
+            _patrol.enabled = !PlayerInsight();
     }
     private bool PlayerInsight()
     {
