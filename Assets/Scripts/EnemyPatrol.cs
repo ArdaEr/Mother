@@ -12,6 +12,7 @@ public class EnemyPatrol : MonoBehaviour
     [SerializeField] private float idleDuration;
     private float idleTimer;
     [SerializeField] private Animator anim;
+    public Dialogue dialogue;
 
     private void Awake()
     {
@@ -22,6 +23,14 @@ public class EnemyPatrol : MonoBehaviour
         anim.SetBool("Move", false);
     }
 
+    private void Start()
+    {
+        //Dialogue dil = new Dialogue();
+        //DialogueManager di = new DialogueManager();
+        //di.StartDialogue(dil);
+        //FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+
+    }
     private void Update()
     {
         if (movingLeft)
