@@ -7,7 +7,6 @@ public class WarriorMovement : MonoBehaviour
     public float movementSpeed = 1;
     public float jumpForce = 20;
     public float horizontalMove = 0f;
-    private float moveDirection;
     public Animator _animator = new Animator();
     private Rigidbody2D _rigidbody;
     private SpriteRenderer _spriteRenderer;
@@ -33,15 +32,11 @@ public class WarriorMovement : MonoBehaviour
         _animator.SetFloat("speed", Mathf.Abs(horizontalMove));
           if(Input.GetKey(KeyCode.A))
            {
-               moveDirection = -1.0f;
                _spriteRenderer.flipX = true;
-               
            }
            else if(Input.GetKey(KeyCode.D))
            {
-               moveDirection = 1.0f;
                _spriteRenderer.flipX = false;
-             
            }
      
     }
