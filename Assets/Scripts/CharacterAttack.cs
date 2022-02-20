@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterAttack : MonoBehaviour
 {
     public float attackRange = 0.5f;
-    public int attackDamage = 40;
+    public int attackDamage = 20;
     public float attackRate = 2f; 
     float nextAttackTime = 0f;
     public Animator _animator;

@@ -1422,7 +1422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 0.65
-  attackDamage: 40
+  attackDamage: 20
   attackRate: 1.5
   _animator: {fileID: 272253997}
   attackPoint: {fileID: 1745766209}
