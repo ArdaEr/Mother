@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
             //Enemy Disable
             GetComponent<Collider2D>().enabled = false;
             this.enabled = false;
-            
+            //çocuk sahneye girsin diye animator de setbool yap ya da trigger
         }
     }
 
