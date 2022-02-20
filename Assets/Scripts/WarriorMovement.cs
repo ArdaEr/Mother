@@ -7,7 +7,6 @@ public class WarriorMovement : MonoBehaviour
     public float movementSpeed = 1;
     public float jumpForce = 20;
     public float horizontalMove = 0f;
-
     public Animator _animator = new Animator();
     private Rigidbody2D _rigidbody;
     private void Start()
@@ -26,6 +25,18 @@ public class WarriorMovement : MonoBehaviour
             _animator.SetBool("isJumping", true);
         }
         _animator.SetFloat("speed", Mathf.Abs(horizontalMove));
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+             Attack();
+        }
+    }
+
+    void Attack()
+    {
+        //Attack Animasyonu
+        _animator.SetTrigger("Attack");
+        //Saldıracak Düşman
+        //Damage
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
