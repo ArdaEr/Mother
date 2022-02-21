@@ -8,14 +8,14 @@ public class KoyuAttack : MonoBehaviour
     [SerializeField] private float attackRange;
     [SerializeField] private float colliderDistance;
     [SerializeField] private int damage;
-    [SerializeField] private BoxCollider2D _collider;
+    [SerializeField] private BoxCollider2D _collider;   
     [SerializeField] private LayerMask _mask;
+    [SerializeField] private AudioClip swordS;
     private WarriorHealth playerHealth;
 
     private float cooldownTimer = Mathf.Infinity;
     private Animator _anima;
     private EnemyPatrol _patrol;
-
     private void Start() 
     {
         _collider = GetComponent<BoxCollider2D>();
@@ -35,6 +35,7 @@ public class KoyuAttack : MonoBehaviour
             //attack
             cooldownTimer = 0;
             _anima.SetTrigger("meleeAttack");
+            SoundManager.instance.PlaySound(swordS);
             }
         }
         if (_patrol != null)

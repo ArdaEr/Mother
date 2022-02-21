@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class WarriorHealth : MonoBehaviour
 {
     [SerializeField] private float startingHealth;
+    
     public float currentHealth { get; private set; }
     private Animator anim;
     private bool dead;
@@ -29,6 +30,7 @@ public class WarriorHealth : MonoBehaviour
         {
             anim.SetTrigger("isDeath");
             SceneManager.LoadScene(_scene.name);
+            
         }
     }
 }

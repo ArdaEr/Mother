@@ -10,10 +10,12 @@ public class MeleeEnemy : MonoBehaviour
     [SerializeField] private int damage;
     [SerializeField] private BoxCollider2D _collider;
     [SerializeField] private LayerMask _mask;
+    [SerializeField] private AudioClip swordS;
     private float cooldownTimer = Mathf.Infinity;
     private Animator _anima;
     private WarriorHealth playerHealth;
     private EnemyPatrol _patrol;
+    
     private void Start() 
     {
         _collider = GetComponent<BoxCollider2D>();
@@ -24,15 +26,20 @@ public class MeleeEnemy : MonoBehaviour
     void Update()
     {
         cooldownTimer += Time.deltaTime;
-    
+
         //Attack only when play in sight?
-        if (PlayerInsight())
+        if (!PlayerInsight())
         {
-            if(cooldownTimer >= attackCoolDown)
+        }
+        else
+        {
+            if (cooldownTimer >= attackCoolDown)
             {
-            //attack
-            cooldownTimer = 0;
-            _anima.SetTrigger("meleeAttack");
+                //attack
+                SoundManager.instance.PlaySound(swordS);
+                cooldownTimer = 0;
+                _anima.SetTrigger("meleeAttack");
+                
             }
         }
         if (_patrol != null)
