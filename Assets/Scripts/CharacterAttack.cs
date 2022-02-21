@@ -12,7 +12,6 @@ public class CharacterAttack : MonoBehaviour
     private Rigidbody2D _rigidbody;
     public Transform attackPoint;
     public LayerMask enemyLayers;
-    [SerializeField] private AudioClip swordSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,7 +44,7 @@ public class CharacterAttack : MonoBehaviour
         {
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
         }
-        SoundManager.instance.PlaySound(swordSound);
+
     }
 
     void OnDrawGizmosSelected() {

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private AudioClip deathSound;
     public int maxHealth = 100;
     int currentHealth;
     public Animator _anim;
@@ -32,7 +31,6 @@ public class Enemy : MonoBehaviour
             
             //Öldüm
             _anim.SetBool("isDeath", true);
-            SoundManager.instance.PlaySound(deathSound);
             //Enemy Disable
             GetComponent<Collider2D>().enabled = false;
             this.enabled = false;
