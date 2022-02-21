@@ -50,7 +50,7 @@ public class Ladder : MonoBehaviour
         if (isClimbing)
         {
             rb.gravityScale = 0f;
-            rb.velocity = new Vector2(rb.velocity.x , vertical * speed / 2);
+            rb.velocity = new Vector2(rb.velocity.x , vertical * (speed / 2));
             _animator.SetBool("isLadder", true);
         }
         else

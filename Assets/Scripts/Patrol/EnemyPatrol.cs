@@ -13,6 +13,7 @@ public class EnemyPatrol : MonoBehaviour
     private float idleTimer;
     [SerializeField] private Animator anim;
     public Dialogue dialogue;
+    public float sure = 0;
 
     private void Awake()
     {
@@ -70,5 +71,13 @@ public class EnemyPatrol : MonoBehaviour
         //Move in that direction
         enemy.position = new Vector3(enemy.position.x + Time.deltaTime * _direction * speed,
             enemy.position.y, enemy.position.z);
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "velet")
+        {
+            Debug.Log("DEÐDÝ");
+
+        }
     }
 }
