@@ -10,7 +10,7 @@ public class MeleeEnemy : MonoBehaviour
     [SerializeField] private int damage;
     [SerializeField] private BoxCollider2D _collider;
     [SerializeField] private LayerMask _mask;
-   
+    [SerializeField] private AudioClip swordS;
     private float cooldownTimer = Mathf.Infinity;
     private Animator _anima;
     private WarriorHealth playerHealth;
@@ -39,6 +39,7 @@ public class MeleeEnemy : MonoBehaviour
                 
                 cooldownTimer = 0;
                 _anima.SetTrigger("meleeAttack");
+                SoundManager.instance.PlaySound(swordS);
                 
             }
         }
