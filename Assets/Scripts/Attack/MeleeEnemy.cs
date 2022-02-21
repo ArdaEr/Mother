@@ -12,8 +12,8 @@ public class MeleeEnemy : MonoBehaviour
     [SerializeField] private LayerMask _mask;
     private float cooldownTimer = Mathf.Infinity;
     private Animator _anima;
+    private WarriorHealth playerHealth;
     private EnemyPatrol _patrol;
-
     private void Start() 
     {
         _collider = GetComponent<BoxCollider2D>();
@@ -44,6 +44,8 @@ public class MeleeEnemy : MonoBehaviour
         Physics2D.BoxCast(_collider.bounds.center + transform.right * attackRange * transform.localScale.x * colliderDistance, 
         new Vector3(_collider.bounds.size.x * attackRange, _collider.bounds.size.y, _collider.bounds.size.z), 
         0, Vector2.left, 0,_mask);
+          if(hit.collider != null)
+        playerHealth = hit.transform.GetComponent<WarriorHealth>();
         return hit.collider != null;
 
     }
@@ -52,4 +54,14 @@ public class MeleeEnemy : MonoBehaviour
         Gizmos.DrawWireCube(_collider.bounds.center + transform.right * attackRange * transform.localScale.x * colliderDistance
         ,new Vector3(_collider.bounds.size.x * attackRange, _collider.bounds.size.y, _collider.bounds.size.z));
     }
+
+      private void DamagePlayer()
+    {
+        if(PlayerInsight())
+        {
+            playerHealth.TakeDamage(damage);
+        }
+    }
 }
+   
+
