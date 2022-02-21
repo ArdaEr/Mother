@@ -10,8 +10,12 @@ public class bolumgec : MonoBehaviour
     {
         
     }
-
+    private Scene _scene;
     // Update is called once per frame
+    private void Awake()
+    {
+        _scene = SceneManager.GetActiveScene();
+    }
     void Update()
     {
         
@@ -20,7 +24,7 @@ public class bolumgec : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Karakter"));
         {
-            SceneManager.LoadScene("Castle");
+            SceneManager.LoadScene(_scene.buildIndex + 1);
         }
     }
 }
