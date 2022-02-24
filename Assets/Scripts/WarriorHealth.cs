@@ -32,5 +32,6 @@ public class WarriorHealth : MonoBehaviour
             SceneManager.LoadScene(_scene.name);
             
         }
+
     }
 }
