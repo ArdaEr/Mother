@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    
     public int maxHealth = 100;
     int currentHealth;
     public Animator _anim;
+    [SerializeField] AudioClip withDeath;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,7 @@ public class Enemy : MonoBehaviour
             //Enemy Disable
             GetComponent<Collider2D>().enabled = false;
             this.enabled = false;
+            SoundManager.instance.PlaySound(withDeath);
             //çocuk sahneye girsin diye animator de setbool yap ya da trigger
         }
     }

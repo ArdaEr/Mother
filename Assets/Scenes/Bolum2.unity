@@ -889,6 +889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac3b0f0f2cebd3b40b7112ebade8de79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  withDeath: {fileID: 8300000, guid: 10a79e914d03dc04685a4636665fd1db, type: 3}
   maxHealth: 100
   _anim: {fileID: 27112233}
 --- !u!114 &27112235
@@ -5257,6 +5258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac3b0f0f2cebd3b40b7112ebade8de79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  withDeath: {fileID: 8300000, guid: 10a79e914d03dc04685a4636665fd1db, type: 3}
   maxHealth: 100
   _anim: {fileID: 462702966}
 --- !u!61 &462702964
@@ -5410,6 +5412,7 @@ MonoBehaviour:
   _mask:
     serializedVersion: 2
     m_Bits: 128
+  swordS: {fileID: 8300000, guid: 8e185b23ec26e31478d28c71b7967f66, type: 3}
 --- !u!114 &462702970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10044,6 +10047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac3b0f0f2cebd3b40b7112ebade8de79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  withDeath: {fileID: 8300000, guid: 10a79e914d03dc04685a4636665fd1db, type: 3}
   maxHealth: 100
   _anim: {fileID: 856038833}
 --- !u!95 &856038833

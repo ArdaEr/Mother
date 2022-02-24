@@ -76,7 +76,7 @@ public class EnemyPatrol : MonoBehaviour
     {
         if (collision.gameObject.tag == "velet")
         {
-            Debug.Log("DEÐDÝ");
+            Debug.Log("Dead");
 
         }
     }
