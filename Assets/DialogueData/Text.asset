@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Text
   m_EditorClassIdentifier: 
   dialogue:
-  - Anne! Anne! Haydutlar geliyor..
-  - "\xC7abuk k\u0131z\u0131 bize ver yoksa b\xFCt\xFCn k\xF6y\xFC \xF6ld\xFCr\xFCr\xFCz."
+  - "\xC7ocuk: Anne! Anne! Haydutlar geliyor.."
+  - "Haydutlar: \xC7abuk k\u0131z\u0131 bize ver! yoksa b\xFCt\xFCn k\xF6y\xFC \xF6ld\xFCr\xFCr\xFCz!"
   - "(K\u0131z\u0131 zorla al\u0131rlar ve iple ba\u011Flarlar)"
-  - "K\u0131z\u0131m\u0131 almak i\xE7in, her birinizi \xF6ld\xFCrmem gerekirse bile,
-    \xD6ld\xFCrece\u011Fim!"
+  - "Anne: K\u0131z\u0131m\u0131 almak i\xE7in, her birinizi \xF6ld\xFCrmem gerekirse
+    bile, \xD6ld\xFCrece\u011Fim!"

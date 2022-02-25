@@ -30,7 +30,6 @@ public class BanditMovement : MonoBehaviour
     {
 
     }
-    DialogueUI di = new DialogueUI();
     public void Update()
     {
         if (movingLeft)
