@@ -13,5 +13,8 @@ MonoBehaviour:
   m_Name: Text
   m_EditorClassIdentifier: 
   dialogue:
-  - "Hay\u0131r o benim \xE7ocu\u011Fum,  onu benden alamazs\u0131n\u0131z."
-  - "Kral\u0131n emirleri var, o bizimle gelecek"
+  - Anne! Anne! Haydutlar geliyor..
+  - "\xC7abuk k\u0131z\u0131 bize ver yoksa b\xFCt\xFCn k\xF6y\xFC \xF6ld\xFCr\xFCr\xFCz."
+  - "(K\u0131z\u0131 zorla al\u0131rlar ve iple ba\u011Flarlar)"
+  - "K\u0131z\u0131m\u0131 almak i\xE7in, her birinizi \xF6ld\xFCrmem gerekirse bile,
+    \xD6ld\xFCrece\u011Fim!"

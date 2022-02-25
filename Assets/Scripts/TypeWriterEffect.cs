@@ -10,7 +10,8 @@ public class TypeWriterEffect : MonoBehaviour
         return StartCoroutine(routine: TypeText(textToType,textLabel));
         
     }
-    [SerializeField]private float tspeed = 50f;
+   
+    [SerializeField]private float tspeed = 100f;
 
 
     private IEnumerator TypeText(string textToType, TMP_Text textLabel)
@@ -31,5 +32,6 @@ public class TypeWriterEffect : MonoBehaviour
         }
 
         textLabel.text = textToType;
+
     }
 }
