@@ -22,8 +22,9 @@ public class Enemy : MonoBehaviour
 
         //Canım acıdı animasyonu
         _anim.SetTrigger("Hurt");
-
-        if(currentHealth <= 0)
+        
+        
+        if (currentHealth <= 0)
         {
             Die();
         }
@@ -32,7 +33,7 @@ public class Enemy : MonoBehaviour
         {   
             
             //Öldüm
-            _anim.SetBool("isDeath", true);
+            
             //Enemy Disable
             GetComponent<Collider2D>().enabled = false;
             this.enabled = false;

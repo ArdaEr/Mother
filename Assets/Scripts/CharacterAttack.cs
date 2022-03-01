@@ -34,17 +34,16 @@ public class CharacterAttack : MonoBehaviour
     }
      void Attack()
     {
-        
+        Enemy e = new Enemy();
         //Attack Animasyonu
         _animator.SetTrigger("Attack");
         //Saldıracak Düşman
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
         //Damage
-        foreach(Collider2D enemy in hitEnemies)
+        foreach (Collider2D enemy in hitEnemies)
         {
             enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
         }
-
     }
 
     void OnDrawGizmosSelected() {
