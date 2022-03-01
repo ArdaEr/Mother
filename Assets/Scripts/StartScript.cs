@@ -20,6 +20,6 @@ public class StartScript : MonoBehaviour
 
     public void SahneyiAc()
     {
-        SceneManager.LoadScene("bolum2");
+        SceneManager.LoadScene("SampleScene");
     }
 }
