@@ -34,7 +34,6 @@ public class CharacterAttack : MonoBehaviour
     }
      void Attack()
     {
-        Enemy e = new Enemy();
         //Attack Animasyonu
         _animator.SetTrigger("Attack");
         //Saldıracak Düşman
