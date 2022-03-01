@@ -26,9 +26,7 @@ public class Enemy : MonoBehaviour
         
         if (currentHealth <= 0)
         {
-            _anim.SetBool("isDeath", true);
-            _anim.SetBool("Move", false);
-            Invoke("Die",1.5f);
+            Die();
         }
     }
     void Die() {
